@@ -20,4 +20,11 @@ public class User {
 	@Column(name="user_type")
 	private String user_type;
 	
+	public int getUserId() {
+		return this.id;
+	}
+	
+	public String getUserType() {
+		return this.user_type;
+	}
 }
