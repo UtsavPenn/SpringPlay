@@ -20,7 +20,7 @@ public class User {
 	@Column(name="user_type")
 	private String user_type;
 	
-	public int getUserId() {
+	public int getId() {
 		return this.id;
 	}
 	
