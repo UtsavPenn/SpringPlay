@@ -3,7 +3,9 @@ package com.jobportal.usermgmt.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.jobportal.usermgmt.entity.User;
@@ -17,8 +19,12 @@ public class UserMgmtController {
 	
 	@RequestMapping("/get-all-users")
 	public  List<User> getAllUsers() {
-		List<User> userList=  usermgmtService.getAllUsers();
-		return userList;
+		return usermgmtService.getAllUsers();
+	}
+	
+	@RequestMapping(method = RequestMethod.POST,path="/register")
+	public User createNewUser(@RequestBody User user){
+		return usermgmtService.createNewUser(user);
 	}
 
 }

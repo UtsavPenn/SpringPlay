@@ -27,4 +27,13 @@ public class User {
 	public String getUserType() {
 		return this.user_type;
 	}
+	
+	
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	public void setUserType(String userType) {
+		this.user_type = userType;
+	}
 }

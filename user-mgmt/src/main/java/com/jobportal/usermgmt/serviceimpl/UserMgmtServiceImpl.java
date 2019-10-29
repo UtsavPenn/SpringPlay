@@ -28,4 +28,10 @@ public class UserMgmtServiceImpl implements UserMgmtService{
 		return userList;
 	}
 
+
+	@Override
+	public User createNewUser(User user) {
+		return userRepository.save(user);
+	}
+
 }

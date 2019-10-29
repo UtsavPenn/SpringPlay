@@ -8,5 +8,6 @@ import com.jobportal.usermgmt.entity.User;
 
 public interface  UserMgmtService {
 	public List<User> getAllUsers();
+	public User createNewUser(User user);
 
 }
